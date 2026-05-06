@@ -1,34 +1,30 @@
 # EcoCred Deployment
 
-## Frontend: Vercel
+## One-click Render deployment
 
-Deploy the `frontend` directory as a Vite app.
+Use the Deploy to Render button in `README.md`, or open this URL:
 
-- Root directory: `frontend`
-- Build command: `npm run build`
-- Output directory: `dist`
-- Environment variable: `VITE_API_BASE=https://your-backend-service.onrender.com`
+https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2FShilpi0620%2Fecocred%2Ftree%2Fmain
 
-After your backend has a real URL, set `VITE_API_BASE` to that URL and redeploy the frontend.
+The Blueprint deploys:
 
-## Backend and ML service: Render
-
-This repo includes `render.yaml` for a Render Blueprint with:
-
+- `ecocred-frontend`: Vite static site
 - `ecocred-backend`: Django API
 - `ecocred-ml-service`: FastAPI ML service
 - `ecocred-db`: Postgres database
 
-In Render, create a new Blueprint from this repository. Render will ask for any `sync: false` secrets in `render.yaml`.
+Expected public URLs:
 
-After Vercel gives you a frontend URL, update these Render environment variables:
+- Frontend: `https://ecocred-frontend.onrender.com`
+- Backend: `https://ecocred-backend.onrender.com`
+- ML service: `https://ecocred-ml-service.onrender.com`
 
-- `CORS_ALLOWED_ORIGINS=https://your-frontend.vercel.app`
-- `CSRF_TRUSTED_ORIGINS=https://your-frontend.vercel.app`
+If Render assigns a different subdomain during setup, update these environment variables and redeploy:
 
-After Render gives you an ML service URL, update this backend environment variable:
-
-- `ML_SERVICE_URL=https://your-ml-service.onrender.com`
+- Frontend service: `VITE_API_BASE`
+- Backend service: `CORS_ALLOWED_ORIGINS`
+- Backend service: `CSRF_TRUSTED_ORIGINS`
+- Backend service: `ML_SERVICE_URL`
 
 ## Temporary public demo with a tunnel
 
