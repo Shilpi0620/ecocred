@@ -19,7 +19,9 @@ services:
     healthCheckPath: /
     buildCommand: pip install -r backend/requirements.txt && python manage.py collectstatic --noinput
     #preDeployCommand: python manage.py migrate
-    startCommand: gunicorn backend.ecocred.wsgi:application --bind 0.0.0.0:$PORT
+    startCommand: |
+     python mange.py migrate
+     gunicorn backend.ecocred.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: DEBUG
         value: "False"
