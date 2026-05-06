@@ -1,0 +1,46 @@
+# Secrets and environment
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+.venv/
+backend/venv/
+
+# Django / local data
+*.sqlite3
+db.sqlite3
+ecocred_db
+media/
+staticfiles/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+frontend/node_modules/
+frontend/dist/
+
+# Logs
+*.log
+*.out.log
+*.err.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local datasets and model artifacts
+waste dataset/
+*.pkl
+*.joblib
+*.h5
