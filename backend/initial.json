@@ -1,0 +1,66 @@
+[
+  {
+    "model": "users.rewardtier", "pk": 1,
+    "fields": {
+      "name": "Bronze", "min_points": 0, "max_points": 249,
+      "cash_bonus_pct": "0.00", "priority_collection": false,
+      "dedicated_aggregator": false, "instant_payout": false,
+      "description": "Standard rate. Basic collection priority."
+    }
+  },
+  {
+    "model": "users.rewardtier", "pk": 2,
+    "fields": {
+      "name": "Silver", "min_points": 250, "max_points": 499,
+      "cash_bonus_pct": "5.00", "priority_collection": true,
+      "dedicated_aggregator": false, "instant_payout": false,
+      "description": "+5% cash bonus on every submission. Priority collection."
+    }
+  },
+  {
+    "model": "users.rewardtier", "pk": 3,
+    "fields": {
+      "name": "Gold", "min_points": 500, "max_points": 999,
+      "cash_bonus_pct": "12.00", "priority_collection": true,
+      "dedicated_aggregator": true, "instant_payout": false,
+      "description": "+12% cash bonus. Dedicated aggregator assigned to you."
+    }
+  },
+  {
+    "model": "users.rewardtier", "pk": 4,
+    "fields": {
+      "name": "Platinum", "min_points": 1000, "max_points": null,
+      "cash_bonus_pct": "20.00", "priority_collection": true,
+      "dedicated_aggregator": true, "instant_payout": true,
+      "description": "+20% cash bonus. Instant payouts. VIP support."
+    }
+  },
+  {
+    "model": "waste.material", "pk": 1,
+    "fields": { "name": "Plastic",   "slug": "plastic",   "icon": "🧴", "points_per_kg": "2.50",  "cash_per_kg": "25.00",  "is_active": true }
+  },
+  {
+    "model": "waste.material", "pk": 2,
+    "fields": { "name": "Metal",     "slug": "metal",     "icon": "🔩", "points_per_kg": "8.00",  "cash_per_kg": "80.00",  "is_active": true }
+  },
+  {
+    "model": "waste.material", "pk": 3,
+    "fields": { "name": "Paper",     "slug": "paper",     "icon": "📄", "points_per_kg": "1.50",  "cash_per_kg": "15.00",  "is_active": true }
+  },
+  {
+    "model": "waste.material", "pk": 4,
+    "fields": { "name": "Glass",     "slug": "glass",     "icon": "🍾", "points_per_kg": "3.00",  "cash_per_kg": "30.00",  "is_active": true }
+  },
+  {
+    "model": "waste.material", "pk": 5,
+    "fields": { "name": "E-Waste",   "slug": "ewaste",    "icon": "💻", "points_per_kg": "15.00", "cash_per_kg": "150.00", "is_active": true }
+  },
+  {
+    "model": "waste.material", "pk": 6,
+    "fields": { "name": "Organic",   "slug": "organic",   "icon": "🌿", "points_per_kg": "1.00",  "cash_per_kg": "10.00",  "is_active": true }
+  },
+  {
+    "model": "waste.material", "pk": 7,
+    "fields": { "name": "Cardboard", "slug": "cardboard", "icon": "📦", "points_per_kg": "1.50",  "cash_per_kg": "15.00",  "is_active": true }
+  }
+]
